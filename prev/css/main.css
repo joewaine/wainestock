@@ -87,115 +87,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-* {
-  /* font-family: cursive;
-   */
-  /* font-weight: bolder; */
-  font-weight: 100;
-}
-
-a {
-  text-decoration: none;
-  font-family: cursive;
-  /* color: white; */
-  color:rgb(163, 163, 246);
-  
-}
-a:hover{
-  text-decoration: underline;
-}
-
-main {
-  /* padding: 2vw; */
-  /* background-color: rgb(57, 135, 57); */
-  /* background-color: #bdbdf6; */
-  min-height: 70vh;
-}
-
-header,
-footer {
-  /* background-color: #a3a3f6; */
-  /* background-color: #7575ba; */
-  color: white;
-  /* padding: 10px 2vw; */
-  /* padding: 20px 0; */
-  padding: 15px 0;
-}
-
-nav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h1 {
-  width: fit-content;
-  margin: 0;
-}
-
-nav ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li{
-  padding-right:0;
-}
-
-nav li a {
-  display: block;
-  text-align: center;
-  padding: 1vw;
-  margin: 0 0.5vw;
-  text-transform: uppercase;
-  text-transform: lowercase;
-  text-decoration: none;
-  color: #a3a3f6;
-}
-
-nav h1 {
-  font-size: 40px;
-}
-
-#menu-button {
-  display: none;
-}
-
-nav li a:hover {
-text-decoration: underline;
-}
-
-.ticket-link {
-  background-color: white;
-  color: #a3a3f6;
-  padding: 15px;
-  font-size: 24px;
-  border-radius: 10px;
-  margin-left: 1vw;
-}
-
-.ticket-link:hover {
-  color: white;
-  background-color: #7575ba;
-  border: 2px solid gold;
-}
-
-h2,h3{
-  font-family: cursive;
-  color:#a3a3f6;
-}
-
-
-footer {
-  padding: 10px 0px;
-}
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -278,145 +169,95 @@ footer {
   clear: both;
 }
 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
 
-#main-container{
-  width: 100%;
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
 }
 
-.subheader{
-margin-bottom:0;
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
-/* media queries */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
 
-
-.half-width-image{
-  width:50%
-}
-
-@media screen and (max-width: 700px) {
-
-  .half-width-image{
-    width:100%
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
-  header {
-    display: block;
-    margin: 0 auto;
+  a,
+  a:visited {
+    text-decoration: underline;
   }
 
-  nav {
-    flex-flow: column nowrap;
-    min-height: 61px;
-    /* min-height: calc(3vw + 34px); */
+  a[href]::after {
+    content: " (" attr(href) ")";
   }
 
-  /* nav h1 {
-    display: block;
-    width: fit-content;
-    position: fixed;
-    top: 3vw;
-    left: 3vw;
-    margin: 0;
-} */
-
-  nav li {
-    display: block;
-    font-size: 24px;
-    margin: 2vh;
+  abbr[title]::after {
+    content: " (" attr(title) ")";
   }
 
-  nav ul {
-    display: none;
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
   }
 
-  nav ul.is-active {
-    display: block;
-    margin-top: 61px;
+  pre {
+    white-space: pre-wrap !important;
   }
 
-  nav h1 {
-    position: absolute;
-    left: 20px;
-    top: 10px;
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
   }
 
-  #menu-button {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    height: 41px;
-    color: #a3a3f6;
-    background-color: white;
-    border: 0;
-    border-radius: 10px;
-    /* padding: 0 2vw; */
-    padding: 0 0 0 2vw;
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
-}
-
-header,
-footer{
-  /* background: #a3a3f6; */
-  width: 80%;
-  margin: 0 auto;
-  color: #a3a3f6;
-  /* background: white; */
-}
-
-header{
-  border-bottom: 1px solid #dadbd9;
-}
-
-footer{
-  border-top: 1px solid #dadbd9;
-}
-
-footer p{
-  margin-bottom:0;
-  margin-top:0;
-}
-
-nav img{
-  /* height: 100px; */
-  height: 70px;
-  height: 60px;
-}
-
-
-body{
-/* background: #ffe6c2; */
-/* background: #c3b091; */
-background: white;
-}
-
-
-.logo-text{
-  width: 75%;
-  width: 55%;
-  margin-top:10px;
-
-}
-
-p{
-  line-height: 2em;
-  color: #a3a3f6;
-}
-
-.emoji{
-  font-size: 30px;
-  display: inline;
-}
-
-
-.chainline{
-  width:100%;
-}
-
-.no-bottom-margin{
-  margin-bottom:0;
-  margin-top:0;
-}
-
 

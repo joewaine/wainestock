@@ -1,0 +1,108 @@
+#lineup, .one-band h2 {
+    /* text-align: center; */
+    margin-top:0;
+    margin-bottom:0;
+    font-family: sans-serif;
+    color: rgb(163, 163, 246);
+}
+
+#lineup-container h1{
+    font-family: cursive;
+    color: rgb(163, 163, 246);
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+#lineup {
+    font-size: 50px;
+    margin: 1vh;
+}
+
+#lineup-container {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    gap: 2%;
+    max-width: 1400px;
+    width: 80%;
+    margin: 3vh auto;
+}
+
+.one-band h2 {
+    display: inline;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.one-band {
+    display: block;
+    color: #a3a3f6;
+    /* background-color: rgb(250, 248, 248); */
+    width: 25vw;
+    /* max-width: 300px; */
+    padding: 5px 0px;
+    border-bottom: 1px solid rgb(218, 219, 217);
+    
+    /* border-radius: 5px; */
+    margin: 10px 0;
+}
+
+/* .one-band:nth-child(5n) {
+    border: 2px solid red;
+}
+
+.one-band:nth-child(5n - 1) {
+    border: 2px solid blue;
+}
+
+.one-band:nth-child(5n - 2) {
+    border: 2px solid #a3a3f6;
+}
+
+.one-band:nth-child(5n - 3) {
+    border: 2px solid orange;
+}
+
+.one-band:nth-child(5n - 4) {
+    border: 2px solid purple;
+} */
+
+
+@media screen and (max-width: 960px) {
+    .one-band {
+        /* width: 90vw; */
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #lineup {
+        font-size: 2em;
+    }
+
+    #lineup-container {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+ 
+}
+
+
+.one-band{
+    position: relative;
+}
+
+.band-time{
+    float: right;
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    font-family: monospace;
+}
