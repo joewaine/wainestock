@@ -420,3 +420,23 @@ p{
 }
 
 
+.video{
+  margin-bottom: 20px;
+
+}
+
+
+.year{
+  margin: 20px 0;
+}
+
+.year img{
+  border: 1px solid rgb(163, 163, 246);
+  width: 70%;
+  margin: 0 auto;
+}
+
+.by{
+  color: rgb(163, 163, 246);
+margin-top: 5px;
+}
