@@ -461,3 +461,16 @@ h4{
 .history h4{
   font-size: 30px;
 }
+
+
+.years .line{
+  color: #a3a3f6;
+  display: block;
+}
+
+
+.years .line b{
+
+  font-weight: 700;
+}
+
