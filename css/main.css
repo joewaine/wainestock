@@ -445,3 +445,19 @@ margin-top: 5px;
 .photography-page .year img{
   width: 60%;
 }
+
+.quote{
+  color: #a3a3f6;
+
+  width: 70%;
+  margin: 0 auto 10px;
+}
+
+h4{
+  font-family: cursive;
+  color: #a3a3f6;
+}
+
+.history h4{
+  font-size: 30px;
+}
