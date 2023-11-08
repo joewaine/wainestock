@@ -440,3 +440,8 @@ p{
   color: rgb(163, 163, 246);
 margin-top: 5px;
 }
+
+
+.photography-page .year img{
+  width: 60%;
+}
