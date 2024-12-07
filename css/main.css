@@ -474,3 +474,16 @@ h4{
   font-weight: 700;
 }
 
+
+
+.wainestrolls img{
+  display: inline-block;
+width:32%
+}
+
+
+#info-current p{
+
+line-height: 1.6em;
+
+}
